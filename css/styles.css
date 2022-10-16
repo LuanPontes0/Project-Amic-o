@@ -153,6 +153,7 @@ header,
 }
 
 .card-body {
+    background-color: transparent;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -160,13 +161,35 @@ header,
     text-align: center;
 }
 
-.card-body a {
+.card-body button {
     margin: auto;
     width: 100%;
 }
 
-.card-body a:hover {
-    transition: 0.5s;
+.card-body button:hover {
     background-color: #333;
     color: #fff;
+}
+
+
+/*Rodapé*/
+
+.list-unstyled li {
+    color: white;
+}
+
+.list-unstyled a {
+    color: white;
+}
+
+.footer-copyright p {
+    color: grey;
+}
+
+.footer-copyright a {
+    color: white;
+}
+
+.bg-secondary {
+    height: 50px;
 }
