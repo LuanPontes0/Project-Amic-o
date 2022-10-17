@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "usuario")
@@ -24,7 +26,9 @@ public class UsuarioModel {
     }
 
     @Column(name = "nome")
-    private String nome;
+    @Size(min = 5, max = 35, message = "o nome deve conter minimo de 5 letras")
+    @NotBlank(message = "nome não pode ser vazio")
+    private String nome ;
 
     public String getNome() {
         return nome;
@@ -35,6 +39,8 @@ public class UsuarioModel {
     }
 
     @Column(name = "email")
+    
+    @NotBlank(message = "email não pode ser vazio")
     private String email;
 
     public String getEmail() {
@@ -46,6 +52,7 @@ public class UsuarioModel {
     }
 
     @Column(name = "senha")
+    @NotBlank(message = "senha não pode ser vazio")
     private String senha;
 
     public String getSenha() {
