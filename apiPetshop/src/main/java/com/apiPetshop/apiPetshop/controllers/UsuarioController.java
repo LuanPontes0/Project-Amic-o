@@ -62,14 +62,16 @@ public class UsuarioController {
     }
     @PostMapping("/login")
     public ModelAndView login(UsuarioModel usuario, BindingResult br, HttpSession session) throws NoSuchAlgorithmException, ServiceExc{
+       
         ModelAndView mv = new ModelAndView();
         mv.addObject("usuario", new UsuarioModel());
         if(br.hasErrors()){
-            mv.setViewName("home/index");
+            mv.setViewName("Login/login");
         }
         UsuarioModel userLogin = serviceUsuario.loginUser(usuario.getEmail(), Util.md5(usuario.getSenha()));
         if(userLogin == null){
             mv.addObject("msg", "usuario n existe");
+            mv.setViewName("Login/login");
         }else{
             session.setAttribute("usuarioLogado", userLogin);
             return index();
