@@ -1,5 +1,7 @@
 package com.apiPetshop.apiPetshop.controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.apiPetshop.apiPetshop.dao.PetDao;
@@ -30,7 +33,7 @@ public class PetController {
     public ModelAndView inserirPet(PetModel pet) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("redirect:/Pet-Adicionados");
-        petrepositorio.save(pet);  
+        petrepositorio.save(pet);
         return mv;
     }
 
@@ -64,18 +67,56 @@ public class PetController {
         petrepositorio.deleteById(id);
         return "redirect:/Pet-Adicionados";
     }
-  /*  @GetMapping("filtrar-pet")
-    public ModelAndView filtroPet(){
+
+    @GetMapping("filtro-pet")
+    public ModelAndView filtroPet() {
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("Pet/filtroPets");
+        mv.setViewName("Pet/filtroPet");
         return mv;
     }
-   /*  @GetMapping("pet-perdidos")
-    public ModelAndView listagemPetPerdido() {
+    
+    @PostMapping("pesquisar-pet")
+    public ModelAndView pesquisarPet(@RequestParam(required = false) String nome){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("Pet/pet-Perdidos");
-        mv.addObject("petPerdidos", petrepositorio.findByStatusAdocao());
+        List<PetModel> listaPet;
+        if(nome == null || nome.trim().isEmpty() ){
+            listaPet = petrepositorio.findAll();
+        }else{
+            listaPet = petrepositorio.findByNomeContainingIgnoreCase(nome);
+        }
+        mv.addObject("ListaDePet", listaPet);
+        mv.setViewName("Pet/pesquisa-resultado");
         return mv;
     }
-*/
+    @GetMapping("/inserirPetUser")
+    public ModelAndView inserirtPetUser(PetModel pet) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Pet/formPetUser");
+        mv.addObject("pet", new PetModel());
+        return mv;
+    }
+
+    @PostMapping("insertPetUser")
+    public ModelAndView inserirPetUser(PetModel pet) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("redirect:/Pet-Adicionados-User");
+        petrepositorio.save(pet);
+        return mv;
+    }
+
+    @GetMapping("Pet-Adicionados-User")
+    public ModelAndView listagemPetUser() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Pet/ListPetUser");
+        mv.addObject("petsLIst", petrepositorio.findAll());
+        return mv;
+    }
+  /*  @GetMapping("Pet-adocao")
+    public ModelAndView listaPetAdocao() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Pet/pets-Adocao");
+        mv.addObject("petsAdocao", petrepositorio.findByStatusAdocao());
+        return mv;
+    }*/
+
 }

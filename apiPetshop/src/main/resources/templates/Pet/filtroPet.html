@@ -31,36 +31,19 @@
 </head>
 
 <body>
-    <header th:fragment="cabecalho">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: blueviolet;">
-            <a class="navbar-brand" th:href="@{/}">
-                <img src="img/Slogam.jpg" alt="" width="90px">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navMobile" class="navbar-collapse collapse justify-content-end">
-                <a class="btn-nav nav-item nav-link"><i class="fas fa-home"></i> home</a>
-                <a class="btn-nav nav-item nav-link" th:href="@{inserirUsuario}"><i class="fas fa-user-graduate"></i>
-                    cadastrar</a>
-                <a class="btn-nav nav-item nav-link" th:href="@{Pet-Adicionados}"><i class="fas fa-user-graduate"></i>
-                    pesquisar</a>
-                <a class="btn-nav nav-item nav-link btn-danger"><i class="fas fa-times"></i> sair</a>
+    <section class="neo-section" style="background-image: url('img/Fundos2.jpg');">
 
+        <div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+        <div class="container" style="margin-top: 50px;">
+            <h4>+ Encontrar Pets</h4>
+            <hr>
+            <div class="row">
+                <div class="card" style="width: 288px;"></div>
+                    <img class="card-img-top" src="img/adote.png">
             </div>
-        </nav>
-    </header>
-    <!--cabeçalho-->
-    <footer th:freagment="rodape1">
-        <div class="rodape">
-            <span>
-                Todos Direitos - 2022 - Mauricio &copy;
-            </span>
-
         </div>
-    </footer>
-    <script src="/webjars/jquery/3.6.1/jquery.min.js"></script>
-    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/webjars/jquery/3.6.1/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

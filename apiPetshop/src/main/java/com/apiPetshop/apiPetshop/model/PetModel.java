@@ -23,6 +23,14 @@ public class PetModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Column(name = "nome")
     @Size(min = 5, max = 35, message = "o nome deve conter minimo de 5 letras")
     @NotBlank(message = "nome não pode ser vazio")

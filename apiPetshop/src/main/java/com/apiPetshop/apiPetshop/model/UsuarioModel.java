@@ -40,7 +40,7 @@ public class UsuarioModel {
 
     @Column(name = "email")
     
-    @NotBlank(message = "email não pode ser vazio")
+  
     private String email;
 
     public String getEmail() {
@@ -52,7 +52,6 @@ public class UsuarioModel {
     }
 
     @Column(name = "senha")
-    @NotBlank(message = "senha não pode ser vazio")
     private String senha;
 
     public String getSenha() {

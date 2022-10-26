@@ -54,7 +54,7 @@
 
 
 
-        <h3>+ Pets cadastrados</h3>
+        <h3>+ Pets Encontrados na pesquisa</h3>
         <hr>
         <a class="btn btn-primary" id="loja-menu" th:href="@{inserirPet}"><i class="fa-solid fa-store"></i> Cadastrar Pets</a>
         <hr>
@@ -65,10 +65,10 @@
                 <th scope="col">Status</th>
                 <th scope="col">Idade</th>
                 <th scope="col">Por Gostaria de adotar?</th>
-                <th scope="col">Ações</th>
+                
             </thead>
             <tbody>
-                <tr scope="row" th:each="pet : ${petsLIst}">
+                <tr scope="row" th:each="pet : ${ListaDePet}">
                     <td th:text="${pet.nome}"></td>
                     <td th:text="${pet.raca}"></td>
                     <td th:text="${pet.status}"></td>
@@ -76,11 +76,7 @@
                     <td th:text="${pet.descricao}"></td>
 
                     <!--<td> O erro esta no editar e excluir-->
-                        <td>
-                        <a class="btn btn-primary" style="width: 90px;" th:href="@{alterar/{id}(id=${pet.id})}"><i class="fas fa-edit"></i> EDITAR</a>
-                        <a class="btn btn-danger"
-                            style="width: 90px;" th:href="@{excluir/{id}(id=${pet.id})}"><i class="fas fa-times"></i> EXCLUIR</a>
-                    </td>
+                      
                 </tr>
                 
             </tbody>

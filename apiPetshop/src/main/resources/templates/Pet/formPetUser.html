@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
                         <a th:href="@{/}" class="nav-item nav-link" id="home-menu"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
-                        <a class="nav-item nav-link" id="perfil-menu" th:href="@{inserirPet}"><i class="fa-solid fa-user"></i> cadastrar Pets</a>
+                        <a class="nav-item nav-link" id="perfil-menu" th:href="@{inserirPetUser}"><i class="fa-solid fa-user"></i> cadastrar Pets</a>
                     </div>
                 </div>
             </nav>
@@ -51,7 +51,7 @@
         <div class="container" style="margin-top: 50px;">
             <h4>+ cadastrar Pets</h4>
             <hr>
-            <form method="post" action="/insertPet" th:object="${pet}">
+            <form method="post" action="/insertPetUser" th:object="${pet}">
                 <div class="row">
 
                     <div class="col-md-6 form-group offset-md-3">
