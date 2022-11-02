@@ -28,40 +28,45 @@
     <script src="js/scripts.js"></script>
 </head>
 
-<body>
+<body style="background-image: url(img/backgroudLoigin.jpg); background-size: cover; background-repeat: no-repeat; height: 100%;">
     <div class="cadastro">
         <a th:href="@{/login}" class="navbar-brand">
             ADMINISTRADOR
         </a>
     </div>
     <div class="Login-form">
-        <div class="container">
+        <div class="container-fluid">
             <div class="main-div">
                 <div class="texto-header">
-                    <h2>User login</h2>
-                    <p>Insira suas credenciais para logar</p>
-
+                    <h2 style="font-size :50px;font-family: Arial;">Login</h2>
+                    <br>
+                    <h6>Por favor insira o seu login</h6>
                 </div>
+
                 <form method="post" action="/loginUser" th:object="${usuario}">
                     <div class="alert alert-danger" role="alert" th:if="${msg}">
                         <strong th:text="${msg}"></strong></div>
-                    <div form-group>
-                        <input type="text" th:field="*{email}" class="form-control" placeholder="email">
+                    <div class="row justify-content-md-center justify-content-sm-center">
+
+                        <div class="col-md-auto col-sm">
+                            <input type="text" th:field="*{email}" class="form-control" placeholder="E-mail" style="width: 100%;">
+
+                            <br>
+
+                            <input type="password" th:field="*{senha}" class="form-control" placeholder="Senha" style="width: 100%;">
+
+                            <div class="form-group">
+                                <a th:href="@{inserirUsuario}">não tem cadastro? clique aqui!</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Logar</button>
+                        </div>
                     </div>
-                    <br>
-                    <div form-group>
-                        <input type="password" th:field="*{senha}" class="form-control" placeholder="senha">
-                    </div>
-                    <div class="cadastro">
-                        <a th:href="@{inserirUsuario}">nao tem cadastro clique aqui</a>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">Login</button>
-                    
                 </form>
-              
             </div>
         </div>
     </div>
+    </div>
 </body>
+
 </html>

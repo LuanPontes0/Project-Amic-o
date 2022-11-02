@@ -44,6 +44,7 @@ public class PetController {
         mv.addObject("petsLIst", petrepositorio.findAll());
         return mv;
     }
+    
 
     @GetMapping("/alterar/{id}")
     public ModelAndView alterar(@PathVariable("id") Integer id) {
@@ -85,7 +86,7 @@ public class PetController {
             listaPet = petrepositorio.findByNomeContainingIgnoreCase(nome);
         }
         mv.addObject("ListaDePet", listaPet);
-        mv.setViewName("Pet/pesquisa-resultado");
+        mv.setViewName("Pet/pesquisa-resultadoUser");
         return mv;
     }
     @GetMapping("/inserirPetUser")
@@ -104,7 +105,7 @@ public class PetController {
         return mv;
     }
 
-    @GetMapping("Pet-Adicionados-User")
+    @GetMapping("Pet-AdicionadosUser")
     public ModelAndView listagemPetUser() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("Pet/ListPetUser");
