@@ -1,0 +1,95 @@
+/*gerais*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+p,
+li {
+    color: #444;
+    font: size 14px;
+}
+
+
+/*barra-navegação*/
+
+header,
+.navbar {
+    background-color: #353d41;
+}
+
+#nav-container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#logo {
+    width: 75px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+#navbar-links a {
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+}
+
+.container-fluid .corpo-perfil {
+    border-radius: 8px;
+    margin-bottom: 20%;
+    height: 100%;
+    margin-top: 10%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(5, 5, 5, 0.906);
+    padding: 2%;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.title-perfil {
+    justify-content: center;
+    color: aliceblue;
+}
+
+.form-group label {
+    color: aliceblue;
+}
+
+.title-perfil h2 {
+    color: rgb(255, 255, 255);
+    margin: 0 0 5px 0;
+    font-size: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.title-perfil h2::after {
+    content: "";
+    border-top: 2px solid aliceblue;
+    width: 150px;
+    position: absolute;
+    top: 60px;
+    left: 22%;
+}

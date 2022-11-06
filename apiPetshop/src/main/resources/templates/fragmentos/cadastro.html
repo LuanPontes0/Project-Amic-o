@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+    <img src="img/dog2.jfif" alt="">
+    <div class="formulario-container">
+        <form action="" method="post">
+            <!--Inserindo itens no formulario-->
+            <br>
+            <label>Nome:</label>
+            <input type="text" name="nome-input" placeholder="Seu nome" required="">
+            <br><br>
+            <label>E-mail:</label>
+            <input type="email" name="email-input" placeholder="E-mail">
+            <br><br>
+            <label>Data de Nascimento</label>
+            <input type="date">
+            <br><br>
+            <a></a>
+            <input type="button" name="Enviar" value="Salvar" onclick="mensagem()">
+            <script>
+                function mensagem() {
+                    alert("Oi, você clicou no botão");
+
+                }
+            </script>
+            <label>Anexe a sua foto</label>
+            <input type="file" multiple="">
+            <br><br>
+            <div class="radioBox">
+                <span>Deseja receber novidades?</span>
+                <br>
+                <label>sim</label>
+                <input type="radio" name="novidades" id="sim" value="sim">
+                <br>
+                <label>não</label>
+                <input type="radio" name="novidades" id="não" value="não">
+                <div class="texto-longo">
+                    <textarea name="texto" id="texto" placeholder="Digite aqui" cols="50" rows="10"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <button onclick="addNewCard()">teste </button>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
