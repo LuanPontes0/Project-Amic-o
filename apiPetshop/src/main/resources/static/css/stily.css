@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 90px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+a {
+    cursor: pointer;
+    font-weight: bold;
+
+}
+a.btn-nav:hover{
+color: rgb(75, 8, 75);
+}
+.neo-section.a:hover{
+    color: rgb(234, 234, 244);
+    background-color: #ae12d9;
+}
+
+
+.neo-section {
+    min-height: 700px;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+}
+
+.wm {
+    width: 50%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+.neo-container {
+    max-width: 1280px;
+    padding: 2% 2%;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.sombra {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0, 5);
+    z-index: 100;
+}
+
+.neo-section>.neo-container {
+    position: relative;
+    z-index: 105;
+}
+
+.texto-centro {
+    color: #070202;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+
+.btn{
+    width: 280px;
+    color: #0a0a0a;
+    border-radius: 10px;
+    border: 3px solid #820f9f;
+    padding: 20px;
+    font-weight: bold;
+
+
+}
+
+.botao {
+    padding: 2% 15%;
+    background-color: rgba(0, 0, 0, 0, 7);
+    
+}
+
+.btn:hover{
+    color: rgb(234, 234, 244);
+    background-color: #ae12d9;
+
+
+}
+
+.rodape {
+    color: #ae12d9;
+    background-color: rgb(75, 9, 137);
+    text-align: center;
+    font-size: 1.25em;
+    padding: 10px;
+}
+
+
+
+/*Responsividade*/
+@media screen and (max-width: 667px) {
+    .wm {
+        width: 100%;
+    }
+
+    nav {
+        height: 100%;
+    }
+
+    .neo-container {
+        margin-top: 120px;
+    }
+
+
+}

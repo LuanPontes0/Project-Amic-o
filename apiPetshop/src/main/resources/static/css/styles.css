@@ -1,0 +1,241 @@
+/*gerais*/
+
+@media(max-width:425px) {
+    /*Slider*/
+    #mainSlider {
+        margin-top: 90px;
+    }
+    #mainSlider .carousel-caption {
+        top: 5%;
+    }
+    #mainSlider .carousel-caption h2 {
+        font: 10px;
+        margin-bottom: 40px;
+    }
+    #mainSlider .carousel-caption p {
+        display: none;
+    }
+    .carousel-caption .main-btn {
+        font-size: 14px;
+    }
+    /*Sobre a ong*/
+    .main-title {
+        font-size: 30px;
+    }
+    #about-area img {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+p,
+li {
+    color: #444;
+    font: size 14px;
+}
+
+
+/*barra-navegação*/
+
+header,
+.navbar {
+    background-color: #353d41;
+}
+
+#nav-container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#logo {
+    width: 75px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+#navbar-links a {
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+}
+
+
+/*carousel slider*/
+
+.container-fluid {
+    padding: 0;
+}
+
+#mainSlider .carousel-inner,
+#mainSlider .carousel-item {
+    height: 90vh;
+}
+
+#mainSlider .carousel-caption {
+    top: 15%;
+}
+
+#mainSlider .carousel-caption h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.633);
+}
+
+#mainSlider .carousel-caption p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 100px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.316);
+}
+
+.main-btn {
+    background-color: #65daf9;
+    color: #fff;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border-color: #65daf9;
+}
+
+.carousel-indicators .active {
+    background-color: #65daf9;
+}
+
+
+/*sobre o projeto*/
+
+#about-area {
+    background-color: #f9f9f9;
+}
+
+.main-title {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title::after {
+    content: "";
+    border-top: 2px solid #333;
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+.about-title {
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/*Area de adotar animais cards*/
+
+.adotar-menu {
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.card:hover {
+    transition: .5s;
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+}
+
+.card-body {
+    background-image: linear-gradient(transparent, transparent, transparent, black);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-body button {
+    margin: auto;
+    width: 100%;
+}
+
+.card-body button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/*Rodapé*/
+
+.list-unstyled li {
+    color: white;
+}
+
+.list-unstyled a {
+    color: white;
+}
+
+.footer-copyright p {
+    color: grey;
+}
+
+.footer-copyright a {
+    color: white;
+}
+
+.bg-secondary {
+    height: 50px;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 9999;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}

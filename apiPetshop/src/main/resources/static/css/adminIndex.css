@@ -1,0 +1,258 @@
+/*gerais*/
+
+@media(max-width:425px) {
+    /*Slider*/
+    #mainSlider {
+        margin-top: 90px;
+    }
+    #mainSlider .carousel-caption {
+        top: 5%;
+    }
+    #mainSlider .carousel-caption h2 {
+        font: 10px;
+        margin-bottom: 40px;
+    }
+    #mainSlider .carousel-caption p {
+        display: none;
+    }
+    .carousel-caption .main-btn {
+        font-size: 14px;
+    }
+    /*Sobre a ong*/
+    .main-title {
+        font-size: 30px;
+    }
+    #about-area img {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+p,
+li {
+    color: #444;
+    font: size 14px;
+}
+
+
+/*barra-navegação*/
+
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+    background-color: #333;
+}
+
+.separator {
+    margin: 3rem 0;
+    border-bottom: 1px dashed #fff;
+}
+
+.page-content {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+}
+
+#sidebar.active {
+    margin-left: -18rem;
+}
+
+#content.active {
+    width: 100%;
+    margin: 0;
+}
+
+.text-gray {
+    color: #aaa;
+}
+
+.nav-link {
+    text-transform: capitalize;
+}
+
+.nav-link:hover {
+    background: #f3f2f2;
+}
+
+.text-primary {
+    color: #7579e8;
+}
+
+@media(max-width: 768px) {
+    #slidebar {
+        margin-left: -17rem;
+    }
+    #slidebar.active {
+        margin-left: 0;
+    }
+}
+
+.botao-nav {
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    /* altura que está do topo */
+    top: 0px;
+    /* altura que vai parar antes do topo */
+    position: sticky;
+}
+
+
+/*carousel slider*/
+
+.container-fluid {
+    padding: 0;
+}
+
+#mainSlider .carousel-inner,
+#mainSlider .carousel-item {
+    height: 90vh;
+}
+
+#mainSlider .carousel-caption {
+    top: 10%;
+}
+
+#mainSlider .carousel-caption h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.633);
+}
+
+#mainSlider .carousel-caption p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 100px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.316);
+}
+
+.main-btn {
+    background-color: #65daf9;
+    color: #fff;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border-color: #65daf9;
+}
+
+.carousel-indicators .active {
+    background-color: #65daf9;
+}
+
+
+/*sobre o projeto*/
+
+#about-area {
+    background-color: #f9f9f9;
+}
+
+.main-title {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title::after {
+    content: "";
+    border-top: 2px solid #333;
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+.about-title {
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/*Area de adotar animais cards*/
+
+.adotar-menu {
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.card:hover {
+    transition: .5s;
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+}
+
+.card-body {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-body button {
+    margin: auto;
+    width: 100%;
+}
+
+.card-body button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/*Rodapé*/
+
+.list-unstyled li {
+    color: white;
+}
+
+.list-unstyled a {
+    color: white;
+}
+
+.footer-copyright p {
+    color: grey;
+}
+
+.footer-copyright a {
+    color: white;
+}
+
+.bg-secondary {
+    height: 50px;
+}

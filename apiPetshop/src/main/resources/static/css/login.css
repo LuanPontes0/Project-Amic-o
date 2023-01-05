@@ -1,0 +1,66 @@
+@charset "UTF-8";
+body {
+    background-image: url(backgroudLoigin.jpg);
+}
+
+.Login-form {
+    min-height: 600px;
+    background-image: url(image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Login-form {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-div {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.517), rgba(128, 128, 128, 0.443), rgba(0, 0, 0, 0.259));
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px #000000;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 50%;
+    min-width: 40%;
+    padding: 50px 0px 50px 0px;
+}
+
+.form-control {
+    width: 100%;
+    background: #f7f7f76d;
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    border: 2px solid #7777;
+}
+
+.btn.btn-primary {
+    border-radius: 8px;
+    background: #000000;
+    border-color: #c10d0d00;
+    font-size: 1.1em;
+    padding: 0;
+    height: 50px;
+    width: 40%;
+    margin: 10px;
+}
+
+.btn.btn-info {
+    background: #9b85cf;
+    border-color: #0c0808;
+    font-size: 1em;
+    padding: 0;
+    height: 40px;
+    width: 50%;
+}
+
+.main-div a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
